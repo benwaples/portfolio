@@ -4,15 +4,16 @@ import {
   Switch,
   Route
 } from 'react-router-dom'
-import './App.css';
-import { HomePage } from '../pages/home/HomePage';
-
+import './App.scss';
+import { About } from './about/About';
+import { Home } from './home/Home'
 function App() {
   return (
    <>
    <Router>
      <Switch>
-       <Route exact path="/" component={HomePage} />
+       <Route exact path="/" component={Home} />
+       <Route exact path="/about" component={About} />
      </Switch>
    </Router>
    </>
