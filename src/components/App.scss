@@ -1,4 +1,11 @@
-import “bootstrap/scss/bootstrap”
+@import '~bootstrap/scss/bootstrap';
+
 body {
   box-sizing: border-box;
+  --color1: #2f4858ff;
+  --color2: #33658aff;
+  --color3: #86bbd8ff;
+  --color4: #f6ae2db3;
+  --color5: #f26419B3;
 }
+
