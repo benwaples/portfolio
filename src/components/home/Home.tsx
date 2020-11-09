@@ -1,18 +1,25 @@
 import React from 'react'
 import { Container, Jumbotron } from 'react-bootstrap'
+import { education, rowing, stAndrews } from '../about/fillers/fillerContent'
+import { PictureLeft } from '../about/fillers/PictureLeft'
+import { PictureRight } from '../about/fillers/PictureRight'
 import './Home.scss'
 
 export const Home = () => {
   return (
-    <div>
-      <Jumbotron fluid>
-        <Container>
-          <h1>Hi, Im Ben</h1>
-          <p>
-            I am a full-stack software engineer who enjoys finding innovative ways to solve problems, connecting with teammates, and vegetables.
-          </p>
-        </Container>
-      </Jumbotron>
+    <>
+    <header id="header">
+      <h1>Ben Waples</h1>
+    </header>
+    <nav>
+
+    </nav>
+    <div id="content">
+    <PictureLeft {...education}/>
+    <PictureRight {...rowing}/>
+    <PictureLeft {...stAndrews}/>
+
     </div>
+    </>
   )
 }
