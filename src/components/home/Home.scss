@@ -46,9 +46,31 @@ header {
   align-items: center;
 }
 
-#projects {
+nav {
   margin-top: 100vh;
-  padding: 20px 0 20px 0;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: 0px;
+  position: sticky;
+  p {
+    text-align: center;
+    width: 25%;
+    font-size: larger;
+    height: 30px;
+    background-color: white;
+    border: none;
+    color: #86BBD8;
+  }
+  p:hover {
+    opacity: .5;
+  }
+}
+
+#projects {
+  padding: 40px 0 20px 0;
   background-color: white;
   display: flex;
   flex-direction: column;
@@ -57,7 +79,7 @@ header {
 }
 
 #tech {
-  padding: 20px 0 20px 0;
+  padding: 40px 0 20px 0;
   background-color: white;
   display: flex;
   flex-direction: column;
