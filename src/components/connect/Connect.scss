@@ -1,0 +1,37 @@
+#connect {
+  img {
+    width: 40px
+  }
+
+  #logos {
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+    width: 200px;
+  }
+
+  #linkedin {
+    border-radius: 5px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 309px;
+
+    button {
+      width: 150px;
+      background-color: white;
+      color: #33658A;
+      border: solid 1px #33658A;
+    }
+
+    button:hover {
+      background-color: #33658A;
+      color: white;
+      border: solid 1px white;
+    }
+  }
+}

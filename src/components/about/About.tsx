@@ -6,14 +6,17 @@ import './About.scss'
 
 export const About = () => {
   return (
-    <div id="About">
-      <section>
-        <img id="theBigOne" src="" alt="ben" />
-        <p>What I do in my free time</p>
-      </section>
+    <>
       <PictureLeft {...education}/>
       <PictureRight {...rowing}/>
       <PictureLeft {...stAndrews}/>
-    </div>
+      <div id="connect-section">
+        <div>
+          <h3>Background</h3>
+          <p>Hi! I am a full-stack software developer </p>
+        </div>
+        <img src="./assets/square.jpg" alt="ben" />
+      </div>
+    </>
   )
 }
