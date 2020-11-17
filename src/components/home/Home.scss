@@ -1,11 +1,12 @@
 @import '../App.scss';
-
 header {
   top: 0;
   left: 0;
   width: 100vw;
   height: 89vh;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   background-size: cover;
   background-image: url(../../images/pacificCity.jpg);
   background-position: center center;
@@ -14,10 +15,17 @@ header {
   position: fixed !important;
   text-align: center;
   z-index: -1;
+
+  img {
+    width: 100px;
+    height: 100px;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+  }
   #text{
     color: white;
     margin: auto;
-    padding-top: 10px;
+    padding-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,7 +62,7 @@ nav {
     height: 30px;
     background-color: white;
     border: none;
-    color: #86BBD8;
+    color: #33658A;
   }
   p:hover {
     opacity: .5;
@@ -98,4 +106,14 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+  
+.bounce-2 {
+    animation-name: bounce-2;
+    animation-timing-function: ease;
+}
+  @keyframes bounce-2 {
+    0%   { transform: translateY(0); opacity: 0; }
+    50%  { transform: translateY(-50px); opacity: 1; }
+    100% { transform: translateY(0); opacity: 0; }
 }

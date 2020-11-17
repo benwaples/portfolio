@@ -13,7 +13,7 @@ export const About = () => {
       <div id="connect-section">
         <div>
           <h3>Background</h3>
-          <p>Hi! I am a full-stack software developer </p>
+          <p>Hi! I'm ben, a full-stack software developer from Portland, OR. My background in marketing and sales has driven my passion in building online tools to help better serve clients. Coding has become my tool of choice to do this! I thrive in team environments and on solo builds. I am committed to continuously learning new technologies and work flows in order to build cutting edge products. See the photos below to learn more about me!</p>
         </div>
         <img src="./assets/square.jpg" alt="ben" />
       </div>
