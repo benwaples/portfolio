@@ -27,7 +27,7 @@ export const Home = () => {
           <h1>Ben Waples</h1>
           <p>Full-Stack Developer</p>
         </div>
-          <img src="https://ibb.co/Yhnv0gd" className="fadeIn bounce-2" alt="scroll down"/>
+          <img src="./assets/scroll-down.png" className="fadeIn bounce-2" alt="scroll down"/>
       </header>
       <nav>
         <p onClick={() => handleNav(aboutRef)}>About Me</p>
