@@ -5,7 +5,10 @@ body {
   --color4: #f6ae2db3;
   --color5: #f26419B3;
 }
-
+#secret {
+  text-decoration: none;
+  color: black;
+}
 #home {
   margin: auto;
   background-color: var(--color3);
