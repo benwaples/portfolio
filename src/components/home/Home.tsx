@@ -27,7 +27,7 @@ export const Home = () => {
           <h1>Ben Waples</h1>
           <p>Full-Stack Developer</p>
         </div>
-          <img src="./assets/scroll-down.png" className="fadeIn bounce-2" alt="scroll down"/>
+          <img onClick={() => handleNav(projectsRef)} src="./assets/scroll-down.png" className="fadeIn bounce-2" alt="scroll down"/>
       </header>
       <nav>
         <p onClick={() => handleNav(aboutRef)}>About Me</p>
