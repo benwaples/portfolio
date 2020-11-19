@@ -30,9 +30,9 @@ export const Home = () => {
           <img onClick={() => handleNav(projectsRef)} src="./assets/scroll-down.png" className="fadeIn bounce-2" alt="scroll down"/>
       </header>
       <nav>
-        <p onClick={() => handleNav(aboutRef)}>About Me</p>
         <p onClick={() => handleNav(projectsRef)}>Recent Projects</p>
         <p onClick={() => handleNav(techRef)}>Tech Stack</p>
+        <p onClick={() => handleNav(aboutRef)}>About Me</p>
         <p onClick={() => handleNav(connect)}>Connect</p>
       </nav>
       <div ref={projectsRef} id="projects">

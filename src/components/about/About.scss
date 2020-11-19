@@ -5,6 +5,24 @@
   justify-content: center;
 }
 
+.carousel-image {
+  height: 500px;
+  width: auto;
+  max-width: 100%;
+}
+
+#carousel {
+  max-height: 600px;
+  height: 500px;
+
+  margin: 0 0 40px 0;
+}
+
+.text-container {
+  background-color: #2f4858B3;
+  padding: 8px
+}
+
 .pictureLeft {
   display: flex;
   justify-content: space-between;
@@ -71,7 +89,7 @@
   }
 }
 
-#connect-section {
+#me {
   display: flex;
   justify-content: space-between;
   width: 800px;
