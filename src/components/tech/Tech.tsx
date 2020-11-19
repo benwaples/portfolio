@@ -36,6 +36,7 @@ export const Tech = () => {
         <section>
           <h3>Database</h3>
           <img src="./assets/postgresql.png" alt="postgreSQL" />
+          <img src="./assets/redis.png" alt="Redis" />
         </section>
       </div>
       <div className="horizontalLine"></div>
