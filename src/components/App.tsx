@@ -16,8 +16,8 @@ function App() {
    <FormspreeProvider project="1547903347124600521">
     <Router>
       <Switch>
-        <Route exact path="/" component={Placeholder} />
-        <Route exact path="/home" component={Home} />
+        <Route exact path="/placeholder" component={Placeholder} />
+        <Route exact path="/" component={Home} />
       </Switch>
     </Router>
    </FormspreeProvider>
