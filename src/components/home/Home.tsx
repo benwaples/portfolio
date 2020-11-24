@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Tech } from '../tech/Tech'
 import { Projects } from '../projects/Projects'
 import './Home.scss'
 import { About } from '../about/About'
 import { Connect } from '../connect/Connect'
-// import { Nav } from '../nav/Nav'
+import { isMobile } from 'react-device-detect'
 
 export const Home = () => {
   const aboutRef = React.useRef<HTMLDivElement>(null)
@@ -20,8 +20,10 @@ export const Home = () => {
       })
     }
   }
+  const mobileAlert = isMobile && alert('please view this site on a desktop for best experience, sorry for the inconvenience')
   return (
     <>
+      {mobileAlert}
       <header id="header">
         <div id="text">
           <h1>Ben Waples</h1>
