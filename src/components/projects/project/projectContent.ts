@@ -19,17 +19,17 @@ export const nsnb = {
   githubLink: 'https://github.com/benwaples/coffee-findr-fe'
 };
 
- const Projectcopy = {
-  title: '',
-  imgSrc: '',
-  description: '',
-  githubLink: ''
-};
- const otherProjectCopy = {
-  imgSrc: '',
-  githubLink: '',
-  deployedLink: ''
-};
+//  const Projectcopy = {
+//   title: '',
+//   imgSrc: '',
+//   description: '',
+//   githubLink: ''
+// };
+//  const otherProjectCopy = {
+//   imgSrc: '',
+//   githubLink: '',
+//   deployedLink: ''
+// };
 export const nasaTracker = {
   imgSrc: 'https://media.giphy.com/media/Ro0zscHaN7jyG7giy6/giphy.gif',
   githubLink: 'https://github.com/benwaples/favorite-api-fe',

@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Tech } from '../tech/Tech'
 import { Projects } from '../projects/Projects'
 import './Home.scss'
@@ -21,7 +21,7 @@ export const Home = () => {
     }
   }
   if(isMobile) alert('please view this site on a desktop for best experience, sorry for the inconvenience')
-  
+
   return (
     <>
       <header id="header">
