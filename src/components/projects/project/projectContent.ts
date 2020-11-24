@@ -30,9 +30,14 @@ export const nsnb = {
   githubLink: '',
   deployedLink: ''
 };
+export const nasaTracker = {
+  imgSrc: 'https://media.giphy.com/media/Ro0zscHaN7jyG7giy6/giphy.gif',
+  githubLink: 'https://github.com/benwaples/favorite-api-fe',
+  deployedLink: 'tender-easley-235cc8.netlify.app/'
+};
 
 export const plantr = {
-  imgSrc: 'https://i.ibb.co/mysB7dH/4nlhgy.gif',
+  imgSrc: 'https://media.giphy.com/media/k68bJOJgakYWvtYao5/giphy.gif',
   githubLink: 'https://github.com/benwaples/plantr',
   deployedLink: 'https://benwaples.github.io/plantr/index.html'
 };
