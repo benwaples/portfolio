@@ -20,10 +20,10 @@ export const Home = () => {
       })
     }
   }
-  const mobileAlert = isMobile && alert('please view this site on a desktop for best experience, sorry for the inconvenience')
+  if(isMobile) alert('please view this site on a desktop for best experience, sorry for the inconvenience')
+  
   return (
     <>
-      {mobileAlert}
       <header id="header">
         <div id="text">
           <h1>Ben Waples</h1>
