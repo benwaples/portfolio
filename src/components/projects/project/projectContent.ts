@@ -1,7 +1,7 @@
 export const canary = {
   title: 'Canary', 
   imgSrc: 'https://i.ibb.co/0GQczhS/4nlffj.gif', 
-  description: `Built in a 1 week remote sprint, Canary mimic's the classroom environment by using TensorFlow MobileNet machine learning to analyze the users gestures and answer real-time questions coming from a teacher. The front-end is a React app with Redux and React Context to manage global state, the TensorFlow MobileNet model with a KNN Classifier for calibrating and playing, and features libraries such as React-Router-Dom, React-Countdown, and Socket.io. The backend is built in nodejs with an Express API, postgreSQL database, Socket.io server, and bcrypt password hashing.`, 
+  description: `Project descriptionBuilt during a 1-week remote sprint, Canary mimic's the classroom environment by using TensorFlow MobileNet machine learning to analyze the user's gestures and answer real-time questions coming from a teacher. The front-end is a React app with Redux and React Context to manage global state, the TensorFlow MobileNet model with a KNN Classifier for calibrating and playing, and features libraries such as React-Router-Dom, React-Countdown, and Socket.io. The backend is built in Nodejs with an Express API, PostgreSQL database, Socket.io server, and Bcrypt password hashing.`, 
   githubLink: 'https://github.com/The-Canary-Project'
 }
 

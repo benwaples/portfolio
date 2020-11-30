@@ -7,7 +7,7 @@ export default function Project({title, imgSrc, description, githubLink}: Projec
     <div className="project-gif-landscape">
         <h3>{title}</h3>
         <img src={imgSrc} alt={title} />
-        <p>{description}.</p>
+        <p>{description}</p>
         <a href={githubLink}>See the code</a>
       </div>
   )
