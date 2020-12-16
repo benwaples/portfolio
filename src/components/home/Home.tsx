@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Tech } from '../tech/Tech'
 import { Projects } from '../projects/Projects'
 import './Home.scss'
@@ -7,10 +7,17 @@ import { Connect } from '../connect/Connect'
 import { isMobile } from 'react-device-detect'
 
 export const Home = () => {
+  const [source, setSource] = useState('https://media.giphy.com/media/LLd6Ma5vQtXyw/giphy.gif')
   const aboutRef = React.useRef<HTMLDivElement>(null)
   const projectsRef = React.useRef<HTMLDivElement>(null)
   const techRef = React.useRef<HTMLDivElement>(null)
   const connect = React.useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const img = new Image();
+    img.src = './assets/pacificCity.jpg'
+    img.onload = () => setSource('./assets/pacificCity.jpg')
+  }, [])
   
   const handleNav = (reference: React.RefObject<HTMLDivElement>) => {
     if(reference.current) {
@@ -20,16 +27,17 @@ export const Home = () => {
       })
     }
   }
+
   if(isMobile) alert('please view this site on a desktop for best experience, sorry for the inconvenience')
 
   return (
     <>
-      <header id="header">
+      <header className={source.includes('giphy') ? 'loading' : ''} style={{backgroundImage: `url(${source})`}} id="header">
         <div id="text">
           <h1>Ben Waples</h1>
           <p>Full-Stack Developer</p>
         </div>
-          <img onClick={() => handleNav(projectsRef)} src="./assets/scroll-down.png" className="fadeIn bounce-2" alt="scroll down"/>
+        <img onClick={() => handleNav(projectsRef)} src="./assets/scroll-down.png" className="fadeIn bounce-2" alt="scroll down"/>
       </header>
       <nav>
         <p onClick={() => handleNav(projectsRef)}>Recent Projects</p>
