@@ -1,7 +1,7 @@
-import React from 'react'
-import './Tech.scss'
+import React from 'react';
+import './Tech.scss';
 
-export const Tech = () => {
+export default function Tech(): JSX.Element {
   return (
     <>
       <div id="techStack">
@@ -10,7 +10,7 @@ export const Tech = () => {
           <img src="./assets/js.png" alt="JavaScript" />
           <img src="./assets/ts.png" alt="TypeScript" />
           <img src="./assets/html.png" alt="HTML" />
-        <img src="./assets/css.png" alt="CSS" />
+          <img src="./assets/css.png" alt="CSS" />
         </section>
         <section>
           <h3>Libraries and Frameworks</h3>
@@ -18,8 +18,8 @@ export const Tech = () => {
           <img src="./assets/Redux.png" alt="Redux" />
           <img src="./assets/scss.png" alt="SCSS" />
           <img src="./assets/node.png" alt="Node" />
-        <img src="./assets/Expressjs.png" alt="Express JS" />
-        <img src="./assets/pug.png" alt="PugJs" />
+          <img src="./assets/Expressjs.png" alt="Express JS" />
+          <img src="./assets/pug.png" alt="PugJs" />
         </section>
         <section>
           <h3>Dev Tools</h3>
@@ -30,8 +30,11 @@ export const Tech = () => {
         <section>
           <h3>Testing</h3>
           <img src="./assets/jest.png" alt="Jest Testing" />
-        <img src="./assets/reacttestinglibrary.png" alt="React Testing Library" />
-        <img src="./assets/qunit.png" alt="Qunit Test" />
+          <img
+            src="./assets/reacttestinglibrary.png"
+            alt="React Testing Library"
+          />
+          <img src="./assets/qunit.png" alt="Qunit Test" />
         </section>
         <section>
           <h3>Database</h3>
@@ -39,7 +42,7 @@ export const Tech = () => {
           <img src="./assets/redis.png" alt="Redis" />
         </section>
       </div>
-      <div className="horizontalLine"></div>
+      <div className="horizontalLine" />
     </>
-  )
+  );
 }
