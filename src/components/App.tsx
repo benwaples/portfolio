@@ -1,27 +1,22 @@
 import React from 'react';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route
-} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.scss';
-import { Placeholder } from './placeholder/Placeholder'
-import {FormspreeProvider } from '@formspree/react'
-import { Home } from './home/Home';
+import { FormspreeProvider } from '@formspree/react';
+import Placeholder from './placeholder/Placeholder';
+import Home from './home/Home';
 
-
-function App() {
+function App(): JSX.Element {
   return (
-   <>
-   <FormspreeProvider project="1547903347124600521">
-    <Router>
-      <Switch>
-        <Route exact path="/placeholder" component={Placeholder} />
-        <Route exact path="/" component={Home} />
-      </Switch>
-    </Router>
-   </FormspreeProvider>
-   </>
+    <>
+      <FormspreeProvider project="1547903347124600521">
+        <Router>
+          <Switch>
+            <Route exact path="/placeholder" component={Placeholder} />
+            <Route exact path="/" component={Home} />
+          </Switch>
+        </Router>
+      </FormspreeProvider>
+    </>
   );
 }
 
