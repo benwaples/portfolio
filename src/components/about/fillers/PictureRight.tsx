@@ -1,7 +1,12 @@
-import React from 'react'
-import { FillerType } from '../../../types'
+import React from 'react';
+import { FillerType } from '../../../types';
 
-export const PictureRight = ({title, imageSrc, description, caption}: FillerType) => {
+export default function PictureRight({
+  title,
+  imageSrc,
+  description,
+  caption,
+}: FillerType): JSX.Element {
   return (
     <div className="pictureRight">
       <div>
@@ -9,9 +14,9 @@ export const PictureRight = ({title, imageSrc, description, caption}: FillerType
         <p>{description}</p>
       </div>
       <figure>
-        <img src={imageSrc} alt={title}/>
+        <img src={imageSrc} alt={title} />
         <figcaption>{caption}</figcaption>
       </figure>
     </div>
-  )
+  );
 }
