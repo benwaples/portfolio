@@ -15,6 +15,10 @@ header {
   text-align: center;
   z-index: -1;
 
+  button {
+    border: none;
+    background-color: transparent;
+  }
   img {
     width: 100px;
     height: 100px;
