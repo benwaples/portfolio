@@ -1,8 +1,8 @@
 /* eslint-disable no-alert */
 import React, { useEffect, useState } from 'react';
 import { isMobile } from 'react-device-detect';
-import { Tech } from '../tech/Tech';
-import { Projects } from '../projects/Projects';
+import Tech from '../tech/Tech';
+import Projects from '../projects/Projects';
 import './Home.scss';
 import About from '../about/About';
 import { Connect } from '../connect/Connect';
