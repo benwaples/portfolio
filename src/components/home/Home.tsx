@@ -5,7 +5,7 @@ import Tech from '../tech/Tech';
 import Projects from '../projects/Projects';
 import './Home.scss';
 import About from '../about/About';
-import { Connect } from '../connect/Connect';
+import Connect from '../connect/Connect';
 
 export default function Home(): JSX.Element {
   const [source, setSource] = useState(
