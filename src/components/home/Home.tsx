@@ -1,3 +1,4 @@
+/* eslint-disable no-alert */
 import React, { useEffect, useState } from 'react';
 import { isMobile } from 'react-device-detect';
 import { Tech } from '../tech/Tech';
@@ -6,7 +7,7 @@ import './Home.scss';
 import About from '../about/About';
 import { Connect } from '../connect/Connect';
 
-export default Home = (): JSX.Element => {
+export default function Home(): JSX.Element {
   const [source, setSource] = useState(
     'https://media.giphy.com/media/LLd6Ma5vQtXyw/giphy.gif'
   );
@@ -55,10 +56,18 @@ export default Home = (): JSX.Element => {
         </button>
       </header>
       <nav>
-        <p onClick={() => handleNav(projectsRef)}>Recent Projects</p>
-        <p onClick={() => handleNav(techRef)}>Tech Stack</p>
-        <p onClick={() => handleNav(aboutRef)}>About Me</p>
-        <p onClick={() => handleNav(connect)}>Connect</p>
+        <button onClick={() => handleNav(projectsRef)} type="button">
+          <p>Recent Projects</p>
+        </button>
+        <button onClick={() => handleNav(techRef)} type="button">
+          <p>Tech Stack</p>
+        </button>
+        <button onClick={() => handleNav(aboutRef)} type="button">
+          <p>About Me</p>
+        </button>
+        <button onClick={() => handleNav(connect)} type="button">
+          <p>Connect</p>
+        </button>
       </nav>
       <div ref={projectsRef} id="projects">
         <h1>Projects</h1>
@@ -79,4 +88,4 @@ export default Home = (): JSX.Element => {
       </div>
     </>
   );
-};
+}

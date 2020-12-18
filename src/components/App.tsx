@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.scss';
 import { FormspreeProvider } from '@formspree/react';
 import { Placeholder } from './placeholder/Placeholder';
-import { Home } from './home/Home';
+import Home from './home/Home';
 
 function App(): JSX.Element {
   return (
