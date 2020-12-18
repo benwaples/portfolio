@@ -12,7 +12,7 @@ export default function Placeholder(): JSX.Element {
         </h1>
         <h3>
           {' '}
-          While I have you here, let me introduce myself. I'm Ben Waples, a
+          While I have you here, let me introduce myself. I&#39;m Ben Waples, a
           full-stack software developer. My portfolio is under construction
           right now, but please find me on{' '}
           <a href="https://github.com/benwaples">Github</a>,{' '}
