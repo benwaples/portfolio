@@ -8,7 +8,6 @@ header {
   flex-direction: column;
   align-items: center;
   background-size: cover;
-  // background-image: url(../../images/pacificCity.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -16,6 +15,10 @@ header {
   text-align: center;
   z-index: -1;
 
+  button {
+    border: none;
+    background-color: transparent;
+  }
   img {
     width: 100px;
     height: 100px;
@@ -67,7 +70,7 @@ nav {
   position: sticky;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.468);
   z-index: 20;
-  p {
+  button {
     margin: auto;
     text-align: center;
     width: 25%;
@@ -76,6 +79,8 @@ nav {
     background-color: white;
     border: none;
     color: #33658A;
+    border: none;
+
   }
   p:hover {
     opacity: .5;
