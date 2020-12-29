@@ -1,9 +1,10 @@
 /* eslint-disable no-alert */
 import React, { useEffect, useState } from 'react';
-import { isMobile } from 'react-device-detect';
+// import { isMobile } from 'react-device-detect';
 import Tech from '../tech/Tech';
 import Projects from '../projects/Projects';
 import './Home.scss';
+import '../../mobileStyles/home.scss';
 import About from '../about/About';
 import Connect from '../connect/Connect';
 
@@ -31,10 +32,10 @@ export default function Home(): JSX.Element {
     }
   };
 
-  if (isMobile)
-    alert(
-      'please view this site on a desktop for best experience, sorry for the inconvenience'
-    );
+  // if (isMobile)
+  //   alert(
+  //     'please view this site on a desktop for best experience, sorry for the inconvenience'
+  //   );
 
   return (
     <>
@@ -69,22 +70,24 @@ export default function Home(): JSX.Element {
           <p>Connect</p>
         </button>
       </nav>
-      <div ref={projectsRef} id="projects">
-        <h1>Projects</h1>
-        <Projects />
-      </div>
-      <div ref={techRef} id="tech">
-        <h1>Tech Stack</h1>
-        <Tech />
-      </div>
-      <div ref={aboutRef} id="aboutMe">
-        <h1>A little about me</h1>
-        <About />
-        <div className="horizontalLine" />
-      </div>
-      <div ref={connect} id="connect">
-        <h1>Lets Connect!</h1>
-        <Connect />
+      <div id="body">
+        <div className="content" ref={projectsRef} id="projects">
+          <h1>Projects</h1>
+          <Projects />
+        </div>
+        <div className="content" ref={techRef} id="tech">
+          <h1>Tech Stack</h1>
+          <Tech />
+        </div>
+        <div className="content" ref={aboutRef} id="aboutMe">
+          <h1>A little about me</h1>
+          <About />
+          <div className="horizontalLine" />
+        </div>
+        <div className="content" ref={connect} id="connect">
+          <h1>Lets Connect!</h1>
+          <Connect />
+        </div>
       </div>
     </>
   );

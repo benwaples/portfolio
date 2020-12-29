@@ -1,0 +1,19 @@
+@media only screen and (max-width: 420px) {
+  header {
+    width: 100%;
+    height: 100vh;
+    // background-size: contain;
+    // background-position: bottom;
+  }
+
+  nav {
+    margin-top: 200vw;
+    width: 100%;
+  }
+
+  #body {
+    margin: auto;
+    width: fit-content;
+    background-color: pink;
+  }
+}
