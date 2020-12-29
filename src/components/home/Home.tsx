@@ -39,23 +39,25 @@ export default function Home(): JSX.Element {
 
   return (
     <>
-      <header
-        className={source.includes('giphy') ? 'loading' : ''}
-        style={{ backgroundImage: `url(${source})` }}
-        id="header"
-      >
-        <div id="text">
-          <h1>Ben Waples</h1>
-          <p>Full-Stack Developer</p>
-        </div>
-        <button onClick={() => handleNav(projectsRef)} type="button">
-          <img
-            src="./assets/scroll-down.png"
-            className="fadeIn bounce-2"
-            alt="scroll down"
-          />
-        </button>
-      </header>
+      <div id="top">
+        <header
+          className={source.includes('giphy') ? 'loading' : ''}
+          style={{ backgroundImage: `url(${source})` }}
+          id="header"
+        >
+          <div id="text">
+            <h1>Ben Waples</h1>
+            <p>Full-Stack Developer</p>
+          </div>
+          <button onClick={() => handleNav(projectsRef)} type="button">
+            <img
+              src="./assets/scroll-down.png"
+              className="fadeIn bounce-2"
+              alt="scroll down"
+            />
+          </button>
+        </header>
+      </div>
       <nav>
         <button onClick={() => handleNav(projectsRef)} type="button">
           <p>Recent Projects</p>

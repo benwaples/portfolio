@@ -1,19 +1,32 @@
 @media only screen and (max-width: 420px) {
-  header {
-    width: 100%;
+  #top {
+    width: 75%;
     height: 100vh;
-    // background-size: contain;
-    // background-position: bottom;
+    #text {
+      margin: 0 0 100px 0;
+      padding-top: 30px;
+      h1 {
+        text-align: left
+      }
+      p {
+        align-self: center;
+      }
+    }
+    header{
+      background-size: contain;
+      background-position: 0 0;
+      height: 100vh
+    }
   }
 
   nav {
-    margin-top: 200vw;
     width: 100%;
+    height: auto;
   }
 
   #body {
     margin: auto;
-    width: fit-content;
+    width: 100%;
     background-color: pink;
   }
 }
