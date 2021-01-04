@@ -8,13 +8,13 @@
 .carousel-image {
   height: 500px;
   width: auto;
-  max-width: 100%;
+  max-width: 100vw;
 }
 
 #carousel {
   max-height: 600px;
   height: 500px;
-
+  max-width: 100%;
   margin: 0 0 40px 0;
 }
 
