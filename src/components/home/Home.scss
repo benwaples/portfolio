@@ -46,6 +46,10 @@ header {
   }
 }
 
+#body {
+  width: max-content;
+}
+
 .loading {
   background-size: auto;
   h1 {
@@ -86,6 +90,7 @@ nav {
     opacity: .5;
   }
 }
+
 
 #aboutMe {
   padding: 40px 0 20px 0;
