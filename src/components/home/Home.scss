@@ -46,6 +46,10 @@ header {
   }
 }
 
+#body {
+  width: 100vw;
+}
+
 .loading {
   background-size: auto;
   h1 {
@@ -60,6 +64,7 @@ header {
 }
 
 nav {
+  width: 100%;
   margin-top: 100vh;
   background-color: white;
   display: flex;
@@ -86,6 +91,7 @@ nav {
     opacity: .5;
   }
 }
+
 
 #aboutMe {
   padding: 40px 0 20px 0;
