@@ -46,13 +46,6 @@ header {
   }
 }
 
-// #top {
-//   position: sticky;
-//   top: 0;
-//   z-index: -1;
-//   width: max-width;
-// }
-
 #body {
   width: 100vw;
 }
@@ -100,6 +93,12 @@ nav {
   }
 }
 
+.content {
+  h1 {
+    margin: auto
+  }
+}
+
 
 #aboutMe {
   padding: 40px 0 20px 0;
@@ -118,8 +117,17 @@ nav {
   background-color: white;
   display: flex;
   flex-direction: column;
+  // flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+
+  section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: flex-start;
+  }
 }
 
 #tech {

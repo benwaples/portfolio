@@ -18,8 +18,8 @@ export default function Projects(): JSX.Element {
       <Project {...alchemyNetworkr} />
       <Project {...nsnb} />
 
-      <h3>Other Projects</h3>
       <div className="otherProjects">
+        <h2>Other Projects</h2>
         <OtherProject {...plantr} />
         <OtherProject {...nasaTracker} />
       </div>
