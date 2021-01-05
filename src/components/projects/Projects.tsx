@@ -8,6 +8,7 @@ import {
   nasaTracker,
   nsnb,
   plantr,
+  twelveDays,
 } from './project/projectContent';
 import './Projects.scss';
 
@@ -22,6 +23,7 @@ export default function Projects(): JSX.Element {
         <h2>Other Projects</h2>
         <OtherProject {...plantr} />
         <OtherProject {...nasaTracker} />
+        <OtherProject {...twelveDays} />
       </div>
       <div className="horizontalLine" />
     </>
