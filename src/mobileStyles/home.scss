@@ -29,4 +29,45 @@
     width: 100%;
     background-color: pink;
   }
+  #me {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    margin-top: 0;
+
+    p {
+      width: 250px;
+      text-align: center;
+      margin: auto;
+      // margin-right: 0;
+      height: auto;
+    }
+    img {
+      margin: auto;
+      width: 250px;
+      height: auto;
+      border-radius: 50%;
+      border: solid white 2px;
+      box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.468);
+    }
+  }
+
+  .otherProjects {
+
+    .thumbnail {
+      img{
+        width: 75%
+      }
+    }
+  }
+
+  .project-gif-landscape {
+    img {
+      height: auto;
+      width: 75%;
+    }
+  }
 }
+
