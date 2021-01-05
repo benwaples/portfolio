@@ -42,3 +42,9 @@ export const plantr = {
   githubLink: 'https://github.com/benwaples/plantr',
   deployedLink: 'https://benwaples.github.io/plantr/index.html',
 };
+
+export const twelveDays = {
+  imgSrc: 'https://media.giphy.com/media/C1dfX58KSYBPGU4Rzj/giphy.gif',
+  githubLink: 'https://github.com/benwaples/12days-fe',
+  deployedLink: 'https://12-days-of-christmas.netlify.app/',
+};
