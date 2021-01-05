@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import Carousel from 'react-bootstrap/Carousel';
 import './About.scss';
@@ -9,12 +10,12 @@ export default function About(): JSX.Element {
         <div>
           <h4>Background</h4>
           <p>
-            Hi!I&#39;m Ben, a full-stack software developer from Portland, OR.
-            My ackground in marketing and sales has driven my passion in
-            building nline tools to help better serve clients.Coding has become
-            my tool choice to do this!I thrive in team environments and on solo
-            lds.I am committed to continuously learning new technologies and
-            flows in order to build cutting edge products.See the photos below
+            Hi! I&#39;m Ben, a full-stack software developer from Portland, OR.
+            My background in marketing and sales has driven my passion in
+            building online tools to help better serve clients. Coding is 
+            my tool choice to do thi! I thrive in team environments and on solo
+            projects. I am committed to continuously learning new technologies and work
+            flows in order to build cutting edge products. See the photos below
             to learn more about me!
           </p>
         </div>
