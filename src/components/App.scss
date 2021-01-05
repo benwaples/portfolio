@@ -8,28 +8,6 @@ body {
   --color3: #86bbd8ff;
   --color4: #f6ae2db3;
   --color5: #f26419B3;
-
+  width: 100vw;
   font-family: 'Quicksand', sans-serif;
-}
-
-.typewriter {
-  overflow: hidden;
-  white-space: nowrap;
-  margin: 0 auto;
-  border-right: .15em solid var(--color4);
-  animation: 
-  typing 3.5s steps(30, end),
-  blink-caret .5s step-end infinite;
-}
-
-/* The typing effect */
-@keyframes typing {
-from { width: 0 }
-to { width: 100% }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-from, to { border-color: transparent }
-50% { border-color: orange }
 }
