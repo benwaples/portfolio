@@ -75,9 +75,9 @@ export default function Home(): JSX.Element {
       <div id="body">
         <div className="content" ref={projectsRef} id="projects">
           <h1>Projects</h1>
-          <section>
+          <div id="projects-component">
             <Projects />
-          </section>
+          </div>
         </div>
         <div className="content" ref={techRef} id="tech">
           <h1>Tech Stack</h1>
