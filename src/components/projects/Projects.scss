@@ -34,18 +34,22 @@
   width: 75%;
   margin-bottom: 40px;
 
-  .thumbnail {
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-
-    img {
-      height: 220px;
-    }
+  h2 {
+    align-self: flex-start;
   }
 
+  
+}
+.thumbnail {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  img {
+    height: 220px;
+  }
 }
 
 .horizontalLine {
