@@ -75,6 +75,40 @@ export default function About(): JSX.Element {
               </div>
             </Carousel.Caption>
           </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="carousel-image"
+              src="./assets/denver_food.jpg"
+              alt="Street tacos and loaded tots from Denver!"
+            />
+            <Carousel.Caption>
+              <div className="text-container">
+                <h4>
+                  Street tacos and loaded tots from Denver!
+                </h4>
+                <p>
+                  I love finding new places too eat and random items on the menu... especially if it includes tatter tots :) 
+                </p>
+              </div>
+            </Carousel.Caption>
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="carousel-image"
+              src="./assets/plums.jpg"
+              alt="Plums and apples fresh off the tree"
+            />
+            <Carousel.Caption>
+              <div className="text-container">
+                <h4>
+                Plums and apples fresh off the tree
+                </h4>
+                <p>
+                  This picture exists because I am a hobbyist photographer and I really love fresh plums.   
+                </p>
+              </div>
+            </Carousel.Caption>
+          </Carousel.Item>
         </Carousel>
       </div>
     </>
