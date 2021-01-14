@@ -12,6 +12,9 @@ export default function Connect(): JSX.Element {
         <a href="https://github.com/benwaples" target="blank">
           <img src="./assets/github.png" alt="Github" />
         </a>
+        <a href="./assets/resume.pdf" target="_blank">
+          <img id="cv-icon" src="./assets/CV.png" alt="resume" />
+        </a>
       </div>
       <Email />
     </div>
