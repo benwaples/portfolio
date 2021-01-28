@@ -146,6 +146,11 @@ nav {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  #source-code {
+    align-self: flex-end;
+    margin-right: 20px;
+  }
 }
   
 .bounce-2 {
