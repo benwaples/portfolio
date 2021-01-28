@@ -32,11 +32,6 @@ export default function Home(): JSX.Element {
     }
   };
 
-  // if (isMobile)
-  //   alert(
-  //     'please view this site on a desktop for best experience, sorry for the inconvenience'
-  //   );
-
   return (
     <>
       <div id="top">
