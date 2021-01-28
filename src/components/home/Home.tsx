@@ -91,6 +91,9 @@ export default function Home(): JSX.Element {
         <div className="content" ref={connect} id="connect">
           <h1>Lets Connect!</h1>
           <Connect />
+          <a id="source-code" href="https://github.com/benwaples/portfolio">
+            See Source Code
+          </a>
         </div>
       </div>
     </>
