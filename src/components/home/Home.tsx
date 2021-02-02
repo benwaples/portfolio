@@ -7,6 +7,7 @@ import './Home.scss';
 import '../../mobileStyles/home.scss';
 import About from '../about/About';
 import Connect from '../connect/Connect';
+import pacificCity from './magicImage';
 
 export default function Home(): JSX.Element {
   const [source, setSource] = useState(
@@ -19,8 +20,8 @@ export default function Home(): JSX.Element {
 
   useEffect(() => {
     const img = new Image();
-    img.src = './assets/pacificCity.jpg';
-    img.onload = () => setSource('./assets/pacificCity.jpg');
+    img.src = pacificCity;
+    img.onload = () => setSource(pacificCity);
   }, []);
 
   const handleNav = (reference: React.RefObject<HTMLDivElement>) => {
