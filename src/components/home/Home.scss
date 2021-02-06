@@ -88,6 +88,9 @@ nav {
     border: none;
 
   }
+  p {
+    transition: .2s ease-in-out;
+  }
   p:hover {
     opacity: .5;
   }
