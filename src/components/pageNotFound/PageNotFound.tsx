@@ -1,7 +1,7 @@
 import React from 'react';
 import './pageNotFound.scss';
 
-export default function PageNotFound() {
+export default function PageNotFound(): JSX.Element {
   return (
     <div id="page-not-found">
       <h1>404</h1>
