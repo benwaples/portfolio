@@ -35,7 +35,7 @@ export function CoolCircleSmall({
     <div
       id="circle-container"
       style={{
-        background: lineColorThin,
+        background: lineColorThin || 'transparent',
         position: 'absolute',
         top,
         left,

@@ -11,15 +11,12 @@ export default function PageNotFound(): JSX.Element {
   const smallGreenCircle = {
     top: '20%',
     left: '-1%',
-    lineColorThin: 'white',
     lineColorThick: 'green',
   };
 
   const largeBlueCircle = {
     top: '10%',
     left: '90%',
-    lineColorThin: 'white',
-    // lineColorThick: 'green',
     rotate: 220,
   };
 
