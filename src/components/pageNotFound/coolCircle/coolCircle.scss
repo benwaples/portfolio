@@ -1,9 +1,6 @@
 #circle-container {
   border-radius: 50%;
 
-  width: 50px;
-  height: 50px;
-
   overflow: hidden;
 
   display: flex;
@@ -16,6 +13,4 @@
   width: 200%;
   height: 15%;
   margin: 4px;
-  
-  transform: rotate(160deg)
 }

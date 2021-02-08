@@ -1,6 +1,10 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
-import { CoolCircleSmall, CoolCircleLarge } from './coolCircle/CoolCircle';
+import {
+  CoolCircleSmall,
+  CoolCircleMedium,
+  CoolCircleLarge,
+} from './coolCircle/CoolCircle';
 import './pageNotFound.scss';
 
 export default function PageNotFound(): JSX.Element {
@@ -16,7 +20,15 @@ export default function PageNotFound(): JSX.Element {
     left: '90%',
     lineColorThin: 'white',
     // lineColorThick: 'green',
-    rotate: 80,
+    rotate: 220,
+  };
+
+  const mediumLavenderCircle = {
+    top: '60%',
+    left: '60%',
+    lineColorThin: '#ecbcfd',
+    lineColorThick: 'white',
+    rotate: 140,
   };
 
   return (
@@ -27,6 +39,7 @@ export default function PageNotFound(): JSX.Element {
       </h3>
       <CoolCircleSmall {...smallGreenCircle} />
       <CoolCircleLarge {...largeBlueCircle} />
+      <CoolCircleMedium {...mediumLavenderCircle} />
     </div>
   );
 }
