@@ -7,7 +7,8 @@ interface CircleProps {
   lineColorThick?: string;
   lineColorThin?: string;
   top: string;
-  left: string;
+  left?: string;
+  right?: string;
   size?: string;
   rotate?: number;
 }
@@ -36,7 +37,7 @@ export function CoolCircleSmall({
       id="circle-container"
       style={{
         background: lineColorThin || 'transparent',
-        position: 'absolute',
+        position: 'fixed',
         top,
         left,
         width: size || '50px',
@@ -57,4 +58,16 @@ export function CoolCircleMedium(props: CircleProps): JSX.Element {
 
 export function CoolCircleLarge(props: CircleProps): JSX.Element {
   return <CoolCircleSmall {...{ ...props, size: '200px' }} />;
+}
+
+export function ZigZagCircle({
+  top,
+  left = 'auto',
+  right = 'auto',
+}: {
+  top: string;
+  left?: string;
+  right?: string;
+}): JSX.Element {
+  return <div className="zigzag" style={{ top, left, right }} />;
 }

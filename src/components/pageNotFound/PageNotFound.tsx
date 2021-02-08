@@ -1,22 +1,16 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import {
-  CoolCircleSmall,
   CoolCircleMedium,
   CoolCircleLarge,
+  ZigZagCircle,
 } from './coolCircle/CoolCircle';
 import './pageNotFound.scss';
 
 export default function PageNotFound(): JSX.Element {
-  const smallGreenCircle = {
-    top: '20%',
-    left: '-1%',
-    lineColorThick: 'green',
-  };
-
   const largeBlueCircle = {
     top: '10%',
-    left: '90%',
+    left: '-5%',
     rotate: 220,
   };
 
@@ -34,7 +28,7 @@ export default function PageNotFound(): JSX.Element {
       <h3>
         Head back <a href="./">home</a>
       </h3>
-      <CoolCircleSmall {...smallGreenCircle} />
+      <ZigZagCircle top="20%" right="-4%" />
       <CoolCircleLarge {...largeBlueCircle} />
       <CoolCircleMedium {...mediumLavenderCircle} />
     </div>
