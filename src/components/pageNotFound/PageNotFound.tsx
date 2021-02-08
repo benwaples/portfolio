@@ -1,4 +1,5 @@
 import React from 'react';
+import CoolCircle from './coolCircle/CoolCircle';
 import './pageNotFound.scss';
 
 export default function PageNotFound(): JSX.Element {
@@ -8,6 +9,7 @@ export default function PageNotFound(): JSX.Element {
       <h3>
         Head back <a href="./">home</a>
       </h3>
+      <CoolCircle />
     </div>
   );
 }
