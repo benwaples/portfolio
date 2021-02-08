@@ -12,16 +12,12 @@ interface CircleProps {
   rotate?: number;
 }
 
-function RotatedLine({
-  lineColorThick,
-  rotate,
-}: Pick<CircleProps, 'lineColorThick' | 'rotate'>) {
+function RotatedLine({ lineColorThick }: Pick<CircleProps, 'lineColorThick'>) {
   return (
     <div
       className="rotated-line"
       style={{
         background: lineColorThick || '#33658a',
-        transform: `rotate(${rotate}deg)`,
       }}
     />
   );
@@ -45,11 +41,12 @@ export function CoolCircleSmall({
         left,
         width: size || '50px',
         height: size || '50px',
+        transform: `rotate(${rotate}deg)`,
       }}
     >
-      <RotatedLine {...{ lineColorThick, rotate }} />
-      <RotatedLine {...{ lineColorThick, rotate }} />
-      <RotatedLine {...{ lineColorThick, rotate }} />
+      <RotatedLine {...{ lineColorThick }} />
+      <RotatedLine {...{ lineColorThick }} />
+      <RotatedLine {...{ lineColorThick }} />
     </div>
   );
 }
