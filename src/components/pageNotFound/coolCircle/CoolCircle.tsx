@@ -2,6 +2,7 @@
 /* eslint-disable react/require-default-props */
 import React from 'react';
 import './coolCircle.scss';
+import zigZagColor from './zigZagMagicString';
 
 interface CircleProps {
   lineColorThick?: string;
@@ -60,14 +61,33 @@ export function CoolCircleLarge(props: CircleProps): JSX.Element {
   return <CoolCircleSmall {...{ ...props, size: '200px' }} />;
 }
 
+interface ZigZagProps {
+  top: string;
+  left?: string;
+  right?: string;
+  color?: string;
+}
+
 export function ZigZagCircle({
   top,
   left = 'auto',
   right = 'auto',
-}: {
-  top: string;
-  left?: string;
-  right?: string;
-}): JSX.Element {
-  return <div className="zigzag" style={{ top, left, right }} />;
+  color = 'teal',
+}: ZigZagProps): JSX.Element {
+  console.log(zigZagColor(color));
+  return (
+    <div
+      className="zigzag"
+      style={{
+        top,
+        left,
+        right,
+        background: `linear-gradient(135deg, ${color} 25%, transparent 25%) -15px 0,
+          linear-gradient(-135deg, ${color} 25%, transparent 25%) -15px 0,
+          linear-gradient(45deg, ${color} 25%, transparent 25%),
+          linear-gradient(-45deg, ${color} 25%, transparent 25%)`,
+        backgroundSize: '30px 30px',
+      }}
+    />
+  );
 }
