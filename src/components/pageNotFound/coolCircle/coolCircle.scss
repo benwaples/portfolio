@@ -14,3 +14,15 @@
   height: 20%;
   margin: 4px;
 }
+
+.zigzag {
+  background: linear-gradient(135deg, teal 25%, transparent 25%) -15px 0,
+    linear-gradient(-135deg, teal 25%, transparent 25%) -15px 0,
+    linear-gradient(45deg, teal 25%, transparent 25%),
+    linear-gradient(-45deg, teal 25%, transparent 25%);
+  background-size: 30px 30px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: fixed;
+}
