@@ -18,7 +18,7 @@ export default function PageNotFound(): JSX.Element {
     top: '60%',
     left: '60%',
     lineColorThin: '#ecbcfd',
-    lineColorThick: 'white',
+    background: 'white',
     rotate: 140,
   };
 

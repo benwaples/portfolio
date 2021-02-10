@@ -2,53 +2,30 @@
 /* eslint-disable react/require-default-props */
 import React from 'react';
 import './coolCircle.scss';
-import zigZagStyles, { ZigZagProps } from './zigZagMagicString';
+import {
+  ZigZagProps,
+  zigZagStyles,
+  CircleProps,
+  circleStyles,
+} from './zigZagMagicString';
 
-interface CircleProps {
-  lineColorThick?: string;
-  lineColorThin?: string;
-  top: string;
-  left?: string;
-  right?: string;
-  size?: string;
-  rotate?: number;
-}
-
-function RotatedLine({ lineColorThick }: Pick<CircleProps, 'lineColorThick'>) {
+function RotatedLine({ background }: Pick<CircleProps, 'background'>) {
   return (
     <div
       className="rotated-line"
       style={{
-        background: lineColorThick || '#33658a',
+        background: background || '#33658a',
       }}
     />
   );
 }
 
-export function CoolCircleSmall({
-  lineColorThick,
-  lineColorThin,
-  top,
-  left,
-  size = '50px',
-  rotate = 160,
-}: Partial<CircleProps>): JSX.Element {
+export function CoolCircleSmall(styling: Partial<CircleProps>): JSX.Element {
   return (
-    <div
-      id="circle-container"
-      style={{
-        background: lineColorThin || 'transparent',
-        position: 'fixed',
-        top,
-        left,
-        width: size || '50px',
-        height: size || '50px',
-        transform: `rotate(${rotate}deg)`,
-      }}
-    >
-      <RotatedLine {...{ lineColorThick }} />
-      <RotatedLine {...{ lineColorThick }} />
-      <RotatedLine {...{ lineColorThick }} />
+    <div id="circle-container" style={circleStyles(styling)}>
+      <RotatedLine background={styling.background} />
+      <RotatedLine background={styling.background} />
+      <RotatedLine background={styling.background} />
     </div>
   );
 }
