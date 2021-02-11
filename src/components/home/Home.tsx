@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable no-alert */
 import React, { useEffect, useState } from 'react';
 // import { isMobile } from 'react-device-detect';

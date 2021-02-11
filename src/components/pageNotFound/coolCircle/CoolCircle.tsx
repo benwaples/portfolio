@@ -34,9 +34,30 @@ export function CoolCircleMedium(props: CircleProps): JSX.Element {
   return <CoolCircleSmall {...{ ...props, size: '100px' }} />;
 }
 
+export const mediumLavenderCircle = {
+  top: '60%',
+  left: '60%',
+  lineColorThin: '#ecbcfd',
+  background: 'white',
+  rotate: 140,
+};
+
 export function CoolCircleLarge(props: CircleProps): JSX.Element {
   return <CoolCircleSmall {...{ ...props, size: '200px' }} />;
 }
+
+export const largeBlueCircle: CircleProps = {
+  top: '10%',
+  left: '-5%',
+  rotate: 220,
+};
+
+export const largeLavenderCircle: CircleProps = {
+  top: '10%',
+  left: '-5%',
+  rotate: 220,
+  background: '#ecbcfd',
+};
 
 export function ZigZagCircle(style: ZigZagProps): JSX.Element {
   return <div className="zigzag" style={zigZagStyles(style)} />;
