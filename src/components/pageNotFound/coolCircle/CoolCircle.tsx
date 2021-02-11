@@ -2,52 +2,30 @@
 /* eslint-disable react/require-default-props */
 import React from 'react';
 import './coolCircle.scss';
+import {
+  ZigZagProps,
+  zigZagStyles,
+  CircleProps,
+  circleStyles,
+} from './zigZagMagicString';
 
-interface CircleProps {
-  lineColorThick?: string;
-  lineColorThin?: string;
-  top: string;
-  left?: string;
-  right?: string;
-  size?: string;
-  rotate?: number;
-}
-
-function RotatedLine({ lineColorThick }: Pick<CircleProps, 'lineColorThick'>) {
+function RotatedLine({ background }: Pick<CircleProps, 'background'>) {
   return (
     <div
       className="rotated-line"
       style={{
-        background: lineColorThick || '#33658a',
+        background: background || '#33658a',
       }}
     />
   );
 }
 
-export function CoolCircleSmall({
-  lineColorThick,
-  lineColorThin,
-  top,
-  left,
-  size = '50px',
-  rotate = 160,
-}: Partial<CircleProps>): JSX.Element {
+export function CoolCircleSmall(styling: Partial<CircleProps>): JSX.Element {
   return (
-    <div
-      id="circle-container"
-      style={{
-        background: lineColorThin || 'transparent',
-        position: 'fixed',
-        top,
-        left,
-        width: size || '50px',
-        height: size || '50px',
-        transform: `rotate(${rotate}deg)`,
-      }}
-    >
-      <RotatedLine {...{ lineColorThick }} />
-      <RotatedLine {...{ lineColorThick }} />
-      <RotatedLine {...{ lineColorThick }} />
+    <div id="circle-container" style={circleStyles(styling)}>
+      <RotatedLine background={styling.background} />
+      <RotatedLine background={styling.background} />
+      <RotatedLine background={styling.background} />
     </div>
   );
 }
@@ -56,18 +34,31 @@ export function CoolCircleMedium(props: CircleProps): JSX.Element {
   return <CoolCircleSmall {...{ ...props, size: '100px' }} />;
 }
 
+export const mediumLavenderCircle = {
+  top: '60%',
+  left: '60%',
+  lineColorThin: '#ecbcfd',
+  background: 'white',
+  rotate: 140,
+};
+
 export function CoolCircleLarge(props: CircleProps): JSX.Element {
   return <CoolCircleSmall {...{ ...props, size: '200px' }} />;
 }
 
-export function ZigZagCircle({
-  top,
-  left = 'auto',
-  right = 'auto',
-}: {
-  top: string;
-  left?: string;
-  right?: string;
-}): JSX.Element {
-  return <div className="zigzag" style={{ top, left, right }} />;
+export const largeBlueCircle: CircleProps = {
+  top: '10%',
+  left: '-5%',
+  rotate: 220,
+};
+
+export const largeLavenderCircle: CircleProps = {
+  top: '10%',
+  left: '-5%',
+  rotate: 220,
+  background: '#ecbcfd',
+};
+
+export function ZigZagCircle(style: ZigZagProps): JSX.Element {
+  return <div className="zigzag" style={zigZagStyles(style)} />;
 }
