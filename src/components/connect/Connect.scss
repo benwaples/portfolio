@@ -25,6 +25,14 @@
     align-items: center;
     height: 309px;
 
+    input, textarea {
+      width: 20rem
+    }
+
+    textarea {
+      height: 10rem;
+    }
+
     button {
       width: 150px;
       background-color: white;
@@ -40,3 +48,4 @@
     }
   }
 }
+
