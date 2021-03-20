@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable no-alert */
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 // import { isMobile } from 'react-device-detect';
 import Tech from '../tech/Tech';
 import Projects from '../projects/Projects';
@@ -14,10 +14,10 @@ export default function Home(): JSX.Element {
   const [source, setSource] = useState(
     'https://media.giphy.com/media/LLd6Ma5vQtXyw/giphy.gif'
   );
-  const aboutRef = React.useRef<HTMLDivElement>(null);
-  const projectsRef = React.useRef<HTMLDivElement>(null);
-  const techRef = React.useRef<HTMLDivElement>(null);
-  const connect = React.useRef<HTMLDivElement>(null);
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const techRef = useRef<HTMLDivElement>(null);
+  const connect = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const img = new Image();

@@ -12,8 +12,19 @@ export default function Email(): JSX.Element {
     <div>
       <form onSubmit={handleSubmit}>
         <input id="name" type="name" name="name" placeholder="name" />
-        <ValidationError prefix="name" field="name" errors={state.errors} />
-        <input id="email" type="email" name="email" placeholder="email" />
+        <ValidationError
+          prefix="name"
+          field="name"
+          errors={state.errors}
+          required
+        />
+        <input
+          id="email"
+          type="email"
+          name="email"
+          placeholder="email"
+          required
+        />
         <ValidationError prefix="Email" field="email" errors={state.errors} />
         <textarea placeholder="message" id="message" name="message" />
         <ValidationError
