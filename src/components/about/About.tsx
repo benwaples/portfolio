@@ -24,6 +24,9 @@ export default function About(): JSX.Element {
       <div id="carousel">
         <ImageGallery 
           items={imageArray}
+          showThumbnails={false}
+          showPlayButton={false}
+          showFullscreenButton={false}
         />
       </div>
     </>
