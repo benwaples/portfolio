@@ -22,6 +22,7 @@ export default function About(): JSX.Element {
         <img src="./assets/square.jpg" alt="ben" />
       </div>
       <div id="carousel">
+        {/* make captions mobile friendly */}
         <ImageGallery 
           items={imageArray}
           showThumbnails={false}
