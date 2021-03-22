@@ -1,3 +1,4 @@
+@import "~react-image-gallery/styles/scss/image-gallery.scss";
 
 #About {
   display: flex;
@@ -5,10 +6,18 @@
   justify-content: center;
 }
 
-.carousel-image {
+.image-gallery-image {
   height: 500px;
   width: auto;
   max-width: 100vw;
+}
+
+.image-gallery-description {
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  // position: relative !important;
+  left: 300px !important;
+  width: 400px !important;
 }
 
 #carousel {
