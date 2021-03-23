@@ -21,11 +21,27 @@
 //   width: 400px !important;
 // }
 
-#carousel {
-  max-height: 600px;
-  height: 500px;
-  max-width: 100%;
-  margin: 0 0 40px 0;
+// #carousel {
+//   max-height: 600px;
+//   height: 500px;
+//   max-width: 100%;
+//   margin: 0 0 40px 0;
+// }
+
+.image-gallery-description {
+  margin: auto;
+  position: relative !important;
+  // left: 25% !important;
+  // bottom: 0;
+  min-width: 80px;
+  width: 30rem !important;
+  max-width: 30em !important;
+}
+
+.carousel-image div {
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
 }
 
 .text-container {
