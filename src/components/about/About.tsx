@@ -49,7 +49,7 @@ export default function About(): JSX.Element {
       layout: 'rtl',
     },
   ];
-  console.log('carouselData', carouselData, CarouselItem);
+
   const sliderConfig: Settings = {
     dots: true,
     infinite: true,
@@ -76,7 +76,7 @@ export default function About(): JSX.Element {
       <div className="carousel-wrapper">
         <Slider {...sliderConfig}>
           {carouselData.map((item) => (
-            <CarouselItem {...item} />
+            <CarouselItem key={item.title} {...item} />
           ))}
         </Slider>
       </div>

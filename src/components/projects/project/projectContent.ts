@@ -1,7 +1,20 @@
+import { ProjectType } from '../../../types';
+
+export const brandlive = {
+  title: 'Brandlive - Events/Streams/Platform',
+  videoSrc: 'https://www.brandlive.com/wp-content/uploads/Events-iPad-v2.mp4',
+  description:
+    'sharing a description here to describe the things I have done at brandlive, limited to but not excluding',
+  githubLink: 'NOPE',
+  mediaCaption:
+    'Product demo curtesy of <a href="https://www.brandlive.com/events" target="_blank">Brandlive website</a>',
+  tempHide: true,
+};
+
 export const canary = {
   title: 'Canary',
   imgSrc: 'https://i.ibb.co/0GQczhS/4nlffj.gif',
-  description: `Project descriptionBuilt during a 1-week remote sprint, Canary mimic's the classroom environment by using TensorFlow MobileNet machine learning to analyze the user's gestures and answer real-time questions coming from a teacher. The front-end is a React app with Redux and React Context to manage global state, the TensorFlow MobileNet model with a KNN Classifier for calibrating and playing, and features libraries such as React-Router-Dom, React-Countdown, and Socket.io. The backend is built in Nodejs with an Express API, PostgreSQL database, Socket.io server, and Bcrypt password hashing.`,
+  description: `Built during a 1-week remote sprint, Canary mimic's the classroom environment by using TensorFlow MobileNet machine learning to analyze the user's gestures and answer real-time questions coming from a teacher. The front-end is a React app with Redux and React Context to manage global state, the TensorFlow MobileNet model with a KNN Classifier for calibrating and playing, and features libraries such as React-Router-Dom, React-Countdown, and Socket.io. The backend is built in Nodejs with an Express API, PostgreSQL database, Socket.io server, and Bcrypt password hashing.`,
   githubLink: 'https://github.com/The-Canary-Project',
 };
 
@@ -19,6 +32,10 @@ export const nsnb = {
   description: `No Stars, No Bucks is a React App front-end with a Express API and postgreSQL database used by coffee enthusiasts who are traveling and looking to find the best coffee shops that aren't a chain. RESTful methodologies were used when building the backend API in order to streamline future development.`,
   githubLink: 'https://github.com/benwaples/coffee-findr-fe',
 };
+
+const projects: ProjectType[] = [brandlive, canary, alchemyNetworkr, nsnb];
+
+export default projects;
 
 //  const Projectcopy = {
 //   title: '',
