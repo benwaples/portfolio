@@ -1,9 +1,62 @@
-/* eslint-disable prettier/prettier */
 import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
+import Slider, { Settings } from 'react-slick';
 import './About.scss';
+import CarouselItem, { ICarouselItemProps } from './CarouselItem';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
 
 export default function About(): JSX.Element {
+  const carouselData: ICarouselItemProps[] = [
+    {
+      image: './assets/western.jpeg',
+      title: 'Western Washington University',
+      description:
+        'I studied Business Administration with a concentration in Marketing and a minor in Economics.I also rowed all 4 years I was at WWU!',
+      layout: 'ltr',
+      textBackground: 'lightblue',
+      textColor: 'blue',
+    },
+    {
+      image: './assets/stAndrews.jpeg',
+      title: 'St. Andrews University - Scotland',
+      description:
+        ' The Quad at St.Andrews where I studied Corporate Social Responsibility and Finance for 4 months',
+      layout: 'stacked',
+      textBackground: 'skyblue',
+      textColor: 'darkblue',
+    },
+    {
+      image: './assets/rowing.jpeg',
+      title: 'Rowing at Western Washington University',
+      description:
+        ' My teammates and I waiting for the next drill on Lake Whatcom in Bellingham, WA.',
+      layout: 'ltr',
+      textBackground: 'lightgray',
+      textColor: 'black',
+    },
+    {
+      image: './assets/denver_food.jpg',
+      title: 'Street tacos and loaded tots from Denver!',
+      description:
+        'I love finding new places too eat and random items on the menu... especially if it includes tatter tots :) ',
+      layout: 'overlay',
+    },
+    {
+      image: './assets/plums.jpg',
+      title: 'Plums and apples fresh off the tree',
+      description:
+        'This picture exists because I am a hobbyist photographer and I really love fresh plums.   ',
+      layout: 'rtl',
+    },
+  ];
+  console.log('carouselData', carouselData, CarouselItem);
+  const sliderConfig: Settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <>
       <div id="me">
@@ -12,103 +65,20 @@ export default function About(): JSX.Element {
           <p>
             Hi! I&#39;m Ben, a full-stack software developer from Portland, OR.
             My background in marketing and sales has driven my passion in
-            building online tools to help better serve clients. I thrive in team environments and on solo
-            projects. I am committed to continuously learning new technologies and work
-            flows in order to build cutting edge products. See the photos below
-            to learn more about me!
+            building online tools to help better serve clients. I thrive in team
+            environments and on solo projects. I am committed to continuously
+            learning new technologies and work flows in order to build cutting
+            edge products. See the photos below to learn more about me!
           </p>
         </div>
         <img src="./assets/square.jpg" alt="ben" />
       </div>
-      <div id="carousel">
-        <Carousel>
-          <Carousel.Item>
-            <img
-              className="carousel-image"
-              src="./assets/western.jpeg"
-              alt="Western Washington University"
-            />
-            <Carousel.Caption>
-              <div className="text-container">
-                <h4>Western Washington University</h4>
-                <p>
-                  I studied Business Administration with a concentration in
-                  Marketing and a minor in Economics.I also rowed all 4 years I
-                  was at WWU!
-                </p>
-              </div>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="carousel-image"
-              src="./assets/stAndrews.jpeg"
-              alt="St. Andrews University - Scotland"
-            />
-            <Carousel.Caption>
-              <div className="text-container">
-                <h4>St. Andrews University - Scotland</h4>
-                <p>
-                  The Quad at St.Andrews where I studied Corporate Social
-                  Responsibility and Finance for 4 months
-                </p>
-              </div>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="carousel-image"
-              src="./assets/rowing.jpeg"
-              alt="Rowing at Western Washington University"
-            />
-            <Carousel.Caption>
-              <div className="text-container">
-                <h4>
-                  My teammates and I waiting for the next drill on Lake Whatcom
-                  in Bellingham, WA.
-                </h4>
-                <p>
-                  My coach would say &#34;Rowing is not a fun sport, its hardly
-                  a sport&#34;, and I would have to agree with that.
-                </p>
-              </div>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="carousel-image"
-              src="./assets/denver_food.jpg"
-              alt="Street tacos and loaded tots from Denver!"
-            />
-            <Carousel.Caption>
-              <div className="text-container">
-                <h4>
-                  Street tacos and loaded tots from Denver!
-                </h4>
-                <p>
-                  I love finding new places too eat and random items on the menu... especially if it includes tatter tots :) 
-                </p>
-              </div>
-            </Carousel.Caption>
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="carousel-image"
-              src="./assets/plums.jpg"
-              alt="Plums and apples fresh off the tree"
-            />
-            <Carousel.Caption>
-              <div className="text-container">
-                <h4>
-                Plums and apples fresh off the tree
-                </h4>
-                <p>
-                  This picture exists because I am a hobbyist photographer and I really love fresh plums.   
-                </p>
-              </div>
-            </Carousel.Caption>
-          </Carousel.Item>
-        </Carousel>
+      <div className="carousel-wrapper">
+        <Slider {...sliderConfig}>
+          {carouselData.map((item) => (
+            <CarouselItem {...item} />
+          ))}
+        </Slider>
       </div>
     </>
   );

@@ -5,22 +5,70 @@
   justify-content: center;
 }
 
-.carousel-image {
-  height: 500px;
-  width: auto;
-  max-width: 100vw;
-}
-
-#carousel {
-  max-height: 600px;
+.carousel-wrapper {
+  margin-bottom: 40px;
   height: 500px;
   max-width: 100%;
-  margin: 0 0 40px 0;
-}
 
-.text-container {
-  background-color: #2f4858B3;
-  padding: 8px
+  .about-me-item {
+    max-width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+
+    img {
+      margin: 0 auto;
+      height: 400px;
+      aspect-ratio: 16/9;
+      object-fit: contain;
+    }
+    
+    .text-container {
+      background-color: #2f4858B3;
+      padding: 8px
+    }
+
+    &.ltr, &.rtl {
+      flex-direction: row;
+      align-items: center;
+
+      img {
+        margin: auto 0;
+      }
+
+      .text-container {
+        height: auto;
+      }
+    }
+    
+    &.rtl {
+      flex-direction: row-reverse;
+    }
+
+    &.stacked {
+      .text-container {
+        height: auto;
+        max-width: calc(400px * (16/9));
+        margin: auto;
+      }
+    }
+
+    &.overlay {
+      margin: auto;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+
+      .text-container {
+        width: calc(400px * (16/9));
+        background-color: rgba(255,255,255, 0.8);
+        color: #2f4858
+      }
+    }
+  }
 }
 
 .pictureLeft {
