@@ -21,9 +21,11 @@ export default function Projects(): JSX.Element {
 
       <div className="otherProjects">
         <h2>Other Projects</h2>
-        <OtherProject {...plantr} />
-        <OtherProject {...nasaTracker} />
-        <OtherProject {...twelveDays} />
+        <div className="thumbnail-container">
+          <OtherProject {...plantr} />
+          <OtherProject {...nasaTracker} />
+          <OtherProject {...twelveDays} />
+        </div>
       </div>
       <div className="horizontalLine" />
     </>
