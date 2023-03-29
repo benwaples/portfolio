@@ -15,11 +15,11 @@
     height: 500px;
     display: flex;
     flex-direction: column;
-
+    gap: 20px;
+    
     img {
       margin: 0 auto;
-      height: 400px;
-      aspect-ratio: 16/9;
+      height: 380px;
       object-fit: contain;
     }
     
@@ -48,7 +48,7 @@
     &.stacked {
       .text-container {
         height: auto;
-        max-width: calc(400px * (16/9));
+        max-width: calc(380px * (16/9));
         margin: auto;
       }
     }
