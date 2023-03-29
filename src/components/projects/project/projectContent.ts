@@ -1,5 +1,17 @@
 import { ProjectType } from '../../../types';
 
+//  const Projectcopy = {
+//   title: '',
+//   imgSrc: '',
+//   description: '',
+//   githubLink: ''
+// };
+//  const otherProjectCopy = {
+//   imgSrc: '',
+//   githubLink: '',
+//   deployedLink: ''
+// };
+
 export const brandlive = {
   title: 'Brandlive - Events/Streams/Platform',
   videoSrc: 'https://www.brandlive.com/wp-content/uploads/Events-iPad-v2.mp4',
@@ -37,17 +49,6 @@ const projects: ProjectType[] = [brandlive, canary, alchemyNetworkr, nsnb];
 
 export default projects;
 
-//  const Projectcopy = {
-//   title: '',
-//   imgSrc: '',
-//   description: '',
-//   githubLink: ''
-// };
-//  const otherProjectCopy = {
-//   imgSrc: '',
-//   githubLink: '',
-//   deployedLink: ''
-// };
 export const nasaTracker = {
   imgSrc: 'https://media.giphy.com/media/Ro0zscHaN7jyG7giy6/giphy.gif',
   githubLink: 'https://github.com/benwaples/favorite-api-fe',
@@ -65,3 +66,5 @@ export const twelveDays = {
   githubLink: 'https://github.com/benwaples/12days-fe',
   deployedLink: 'https://12-days-of-christmas.netlify.app/',
 };
+
+export const otherProjects = [nasaTracker, plantr, twelveDays];
