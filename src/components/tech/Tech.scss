@@ -1,7 +1,8 @@
 #techStack {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: flex-start;
+  gap: 30px;
   align-items: flex-start;
   width: 100%;
   

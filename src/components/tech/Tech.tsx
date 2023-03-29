@@ -22,6 +22,18 @@ export default function Tech(): JSX.Element {
           <img src="./assets/pug.png" alt="PugJs" />
         </section>
         <section>
+          <h3>Database</h3>
+          <img src="./assets/postgresql.png" alt="postgreSQL" />
+          <img src="./assets/redis.png" alt="Redis" />
+          <img src="./assets/athena.png" alt="Athena" />
+        </section>
+        <section>
+          <h3>Cloud Computing</h3>
+          <img src="./assets/Lambda.png" alt="Lambda" />
+          <img src="./assets/cloudfront.png" alt="Cloudfront" />
+          <img src="./assets/s3.png" alt="S3" />
+        </section>
+        <section>
           <h3>Dev Tools</h3>
           <img src="./assets/githubLarge.png" alt="Github" />
           <img src="./assets/heroku.png" alt="Heroku" />
@@ -35,11 +47,6 @@ export default function Tech(): JSX.Element {
             alt="React Testing Library"
           />
           <img src="./assets/qunit.png" alt="Qunit Test" />
-        </section>
-        <section>
-          <h3>Database</h3>
-          <img src="./assets/postgresql.png" alt="postgreSQL" />
-          <img src="./assets/redis.png" alt="Redis" />
         </section>
       </div>
       <div className="horizontalLine" />
