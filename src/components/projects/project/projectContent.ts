@@ -16,11 +16,10 @@ export const brandlive = {
   title: 'Brandlive - Events/Streams/Platform',
   videoSrc: 'https://www.brandlive.com/wp-content/uploads/Events-iPad-v2.mp4',
   description:
-    'sharing a description here to describe the things I have done at brandlive, limited to but not excluding',
+    'Built, released, and maintained the 3.0 version of the Events product (also known as Streams and The Platform) starting with a team of 6 devs that grew to 18. The application is focused on virtual events, meetings, and webinars for enterprise clients.',
   githubLink: 'NOPE',
   mediaCaption:
     'Product demo curtesy of <a href="https://www.brandlive.com/events" target="_blank">Brandlive website</a>',
-  tempHide: true,
 };
 
 export const canary = {
