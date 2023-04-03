@@ -1,3 +1,4 @@
+/* eslint-disable react/require-default-props */
 import React from 'react';
 import cn from 'classnames';
 
@@ -13,14 +14,8 @@ export interface ICarouselItemProps {
 }
 
 function CarouselItem(props: ICarouselItemProps): JSX.Element {
-  const {
-    image,
-    title,
-    description,
-    layout,
-    textBackground,
-    textColor,
-  } = props;
+  const { image, title, description, layout, textBackground, textColor } =
+    props;
 
   const isOverlay = layout === 'overlay';
 

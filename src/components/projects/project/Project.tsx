@@ -26,7 +26,7 @@ export default function Project({
       <h3>{title}</h3>
       {getMediaElement()}
       {mediaCaption ? (
-        <p dangerouslySetInnerHTML={{ __html: mediaCaption }} />
+        <div dangerouslySetInnerHTML={{ __html: mediaCaption }} />
       ) : null}
       <p>{description}</p>
       <a href={githubLink}>See the code</a>
