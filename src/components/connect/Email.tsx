@@ -9,7 +9,7 @@ export default function Email(): JSX.Element {
   //   );
   // }
   return (
-    <div>dont need it</div>
+    <div>TODO: find another email client to use</div>
     // <form onSubmit={handleSubmit}>
     //   <input id="name" type="name" name="name" placeholder="name" />
     //   <ValidationError
