@@ -4,15 +4,18 @@ import './About.scss';
 import CarouselItem, { ICarouselItemProps } from './CarouselItem';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
+import useScreenQuery from '../../utils/use-screen-query';
 
 export default function About(): JSX.Element {
+  const { isMobile } = useScreenQuery();
+
   const carouselData: ICarouselItemProps[] = [
     {
       image: './assets/western.jpeg',
       title: 'Western Washington University',
       description:
         'I studied Business Administration with a concentration in Marketing and a minor in Economics.I also rowed all 4 years I was at WWU!',
-      layout: 'ltr',
+      layout: isMobile ? 'stacked' : 'ltr',
       textBackground: 'lightblue',
       textColor: 'blue',
     },
@@ -21,7 +24,7 @@ export default function About(): JSX.Element {
       title: 'St. Andrews University - Scotland',
       description:
         ' The Quad at St.Andrews where I studied Corporate Social Responsibility and Finance for 4 months',
-      layout: 'stacked',
+      layout: isMobile ? 'stacked' : 'stacked',
       textBackground: 'skyblue',
       textColor: 'darkblue',
     },
@@ -30,7 +33,7 @@ export default function About(): JSX.Element {
       title: 'Rowing at Western Washington University',
       description:
         ' My teammates and I waiting for the next drill on Lake Whatcom in Bellingham, WA.',
-      layout: 'ltr',
+      layout: isMobile ? 'stacked' : 'ltr',
       textBackground: 'lightgray',
       textColor: 'black',
     },
@@ -39,14 +42,14 @@ export default function About(): JSX.Element {
       title: 'Street tacos and loaded tots from Denver!',
       description:
         'I love finding new places too eat and random items on the menu... especially if it includes tatter tots :) ',
-      layout: 'overlay',
+      layout: isMobile ? 'stacked' : 'overlay',
     },
     {
       image: './assets/plums.jpg',
       title: 'Plums and apples fresh off the tree',
       description:
         'This picture exists because I am a hobbyist photographer and I really love fresh plums.   ',
-      layout: 'rtl',
+      layout: isMobile ? 'stacked' : 'rtl',
     },
   ];
 

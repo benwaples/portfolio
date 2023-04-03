@@ -1,4 +1,5 @@
 @import '../App.scss';
+@import '/src/mobileStyles/home.scss';
 
 @mixin flexCenter() {
   display: flex;
@@ -151,4 +152,59 @@ nav {
     0%   { transform: translateY(0); opacity: 0; }
     50%  { transform: translateY(-50px); opacity: 1; }
     100% { transform: translateY(0); opacity: 0; }
+}
+
+@include mobile() {
+  .content {
+    max-width: 100%;
+    padding: 0 25px 40px;
+
+    .horizontalLine {
+      width: 100%;
+    }
+
+    #projects-component {
+      @include flexCenter();
+      max-width: 100%;
+
+      .project-gif-landscape {
+        max-width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+      
+      .otherProjects {
+        .thumbnail-container {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+
+    #techStack {
+      align-items: center;
+      justify-content: center;
+    }
+
+    #me {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .carousel-wrapper {
+      .about-me-item {
+        img {
+          max-width: 100%;
+          aspect-ratio: 16/9;
+        }
+
+        .text-contatiner {
+          max-width: 100%
+        }
+      }
+    }
+  }
+
 }
