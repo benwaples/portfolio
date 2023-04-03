@@ -2,28 +2,23 @@
 import React from 'react';
 import OtherProject from './project/OtherProject';
 import Project from './project/Project';
-import {
-  alchemyNetworkr,
-  canary,
-  nasaTracker,
-  nsnb,
-  plantr,
-  twelveDays,
-} from './project/projectContent';
+import projects, { otherProjects } from './project/projectContent';
 import './Projects.scss';
 
 export default function Projects(): JSX.Element {
   return (
     <>
-      <Project {...canary} />
-      <Project {...alchemyNetworkr} />
-      <Project {...nsnb} />
+      {projects.map((project) => (
+        <Project {...project} key={project.title} />
+      ))}
 
       <div className="otherProjects">
         <h2>Other Projects</h2>
-        <OtherProject {...plantr} />
-        <OtherProject {...nasaTracker} />
-        <OtherProject {...twelveDays} />
+        <div className="thumbnail-container">
+          {otherProjects.map((project) => (
+            <OtherProject key={project.imgSrc} {...project} />
+          ))}
+        </div>
       </div>
       <div className="horizontalLine" />
     </>

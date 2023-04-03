@@ -1,7 +1,32 @@
+import { ProjectType } from '../../../types';
+
+//  const Projectcopy = {
+//   title: '',
+//   imgSrc: '',
+//   description: '',
+//   githubLink: ''
+// };
+//  const otherProjectCopy = {
+//   imgSrc: '',
+//   githubLink: '',
+//   deployedLink: ''
+// };
+
+export const brandlive = {
+  title: 'Brandlive - Events/Streams/Platform',
+  videoSrc: 'https://www.brandlive.com/wp-content/uploads/Events-iPad-v2.mp4',
+  description:
+    'sharing a description here to describe the things I have done at brandlive, limited to but not excluding',
+  githubLink: 'NOPE',
+  mediaCaption:
+    'Product demo curtesy of <a href="https://www.brandlive.com/events" target="_blank">Brandlive website</a>',
+  tempHide: true,
+};
+
 export const canary = {
   title: 'Canary',
   imgSrc: 'https://i.ibb.co/0GQczhS/4nlffj.gif',
-  description: `Project descriptionBuilt during a 1-week remote sprint, Canary mimic's the classroom environment by using TensorFlow MobileNet machine learning to analyze the user's gestures and answer real-time questions coming from a teacher. The front-end is a React app with Redux and React Context to manage global state, the TensorFlow MobileNet model with a KNN Classifier for calibrating and playing, and features libraries such as React-Router-Dom, React-Countdown, and Socket.io. The backend is built in Nodejs with an Express API, PostgreSQL database, Socket.io server, and Bcrypt password hashing.`,
+  description: `Built during a 1-week remote sprint, Canary mimic's the classroom environment by using TensorFlow MobileNet machine learning to analyze the user's gestures and answer real-time questions coming from a teacher. The front-end is a React app with Redux and React Context to manage global state, the TensorFlow MobileNet model with a KNN Classifier for calibrating and playing, and features libraries such as React-Router-Dom, React-Countdown, and Socket.io. The backend is built in Nodejs with an Express API, PostgreSQL database, Socket.io server, and Bcrypt password hashing.`,
   githubLink: 'https://github.com/The-Canary-Project',
 };
 
@@ -20,17 +45,10 @@ export const nsnb = {
   githubLink: 'https://github.com/benwaples/coffee-findr-fe',
 };
 
-//  const Projectcopy = {
-//   title: '',
-//   imgSrc: '',
-//   description: '',
-//   githubLink: ''
-// };
-//  const otherProjectCopy = {
-//   imgSrc: '',
-//   githubLink: '',
-//   deployedLink: ''
-// };
+const projects: ProjectType[] = [brandlive, canary, alchemyNetworkr, nsnb];
+
+export default projects;
+
 export const nasaTracker = {
   imgSrc: 'https://media.giphy.com/media/Ro0zscHaN7jyG7giy6/giphy.gif',
   githubLink: 'https://github.com/benwaples/favorite-api-fe',
@@ -48,3 +66,5 @@ export const twelveDays = {
   githubLink: 'https://github.com/benwaples/12days-fe',
   deployedLink: 'https://12-days-of-christmas.netlify.app/',
 };
+
+export const otherProjects = [nasaTracker, plantr, twelveDays];

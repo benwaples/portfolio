@@ -1,52 +1,73 @@
-@import "~react-image-gallery/styles/scss/image-gallery.scss";
-
 #About {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-// .image-gallery-image {
-//   height: 500px;
-//   width: auto;
-//   width: 100vw;
-//   max-width: 1300px;
-// }
+.carousel-wrapper {
+  margin-bottom: 40px;
+  height: 500px;
+  max-width: 100%;
 
-// .image-gallery-description {
-//   margin: auto;
-//   background-color: rgba(0, 0, 0, 0.7) !important;
-//   // position: relative !important;
-//   left: 300px !important;
-//   width: 400px !important;
-// }
+  .about-me-item {
+    max-width: 100%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+    img {
+      margin: 0 auto;
+      height: 380px;
+      object-fit: contain;
+    }
+    
+    .text-container {
+      background-color: #2f4858B3;
+      padding: 8px
+    }
 
-// #carousel {
-//   max-height: 600px;
-//   height: 500px;
-//   max-width: 100%;
-//   margin: 0 0 40px 0;
-// }
+    &.ltr, &.rtl {
+      flex-direction: row;
+      align-items: center;
 
-.image-gallery-description {
-  margin: auto;
-  position: relative !important;
-  // left: 25% !important;
-  // bottom: 0;
-  min-width: 80px;
-  width: 30rem !important;
-  max-width: 30em !important;
-}
+      img {
+        margin: auto 0;
+      }
 
-.carousel-image div {
-  display: flex !important;
-  justify-content: center;
-  align-items: center;
-}
+      .text-container {
+        height: auto;
+      }
+    }
+    
+    &.rtl {
+      flex-direction: row-reverse;
+    }
 
-.text-container {
-  background-color: #2f4858B3;
-  padding: 8px
+    &.stacked {
+      .text-container {
+        height: auto;
+        max-width: calc(380px * (16/9));
+        margin: auto;
+      }
+    }
+
+    &.overlay {
+      margin: auto;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+
+      .text-container {
+        width: calc(400px * (16/9));
+        background-color: rgba(255,255,255, 0.8);
+        color: #2f4858
+      }
+    }
+  }
 }
 
 .pictureLeft {
@@ -120,10 +141,7 @@
   justify-content: center;
   width: 100%;
   margin: 60px 0 60px 0;
-
-  p {
-    width: 500px;
-  }
+  gap: 60px;
 
   @media only screen and (max-width: 420px) {
     p {

@@ -7,9 +7,12 @@ export type FillerType = {
 
 export type ProjectType = {
   title: string;
-  imgSrc: string;
+  imgSrc?: string;
+  videoSrc?: string;
   description: string;
   githubLink: string;
+  mediaCaption?: string;
+  tempHide?: boolean;
 };
 
 export type OtherProjectType = {
