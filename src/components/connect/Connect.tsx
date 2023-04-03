@@ -1,6 +1,6 @@
 import React from 'react';
 import './Connect.scss';
-import Email from './Email';
+// import Email from './Email';
 
 export default function Connect(): JSX.Element {
   return (
@@ -16,7 +16,7 @@ export default function Connect(): JSX.Element {
           <img id="cv-icon" src="./assets/CV.png" alt="resume" />
         </a>
       </div>
-      <Email />
+      {/* <Email /> */}
     </div>
   );
 }
