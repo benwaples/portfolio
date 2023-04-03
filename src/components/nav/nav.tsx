@@ -1,4 +1,5 @@
 import React from 'react';
+import useScreenQuery from '../../utils/use-screen-query';
 
 interface INavProps {
   handleNav: (refName: string) => void;
@@ -7,16 +8,18 @@ interface INavProps {
 function Nav(props: INavProps): JSX.Element {
   const { handleNav } = props;
 
+  const { isMobile } = useScreenQuery();
+
   return (
     <nav>
       <button onClick={() => handleNav('projects')} type="button">
-        <p>Recent Projects</p>
+        <p>{isMobile ? 'Projects' : 'Recent Projects'}</p>
       </button>
       <button onClick={() => handleNav('tech')} type="button">
-        <p>Tech Stack</p>
+        <p>{isMobile ? 'Tech' : 'Tech Stack'}</p>
       </button>
       <button onClick={() => handleNav('about')} type="button">
-        <p>About Me</p>
+        <p>{isMobile ? 'About' : 'About Me'}</p>
       </button>
       <button onClick={() => handleNav('connect')} type="button">
         <p>Connect</p>

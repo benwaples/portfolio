@@ -10,7 +10,7 @@ import About from '../about/About';
 import Connect from '../connect/Connect';
 import pacificCity from './magicImage';
 import useScreenQuery from '../../utils/use-screen-query';
-import Nav from '../nav/nav';
+import Nav from '../nav/Nav';
 import { Dictionary, HomepageSections } from '../../types';
 
 export default function Home(): JSX.Element {
