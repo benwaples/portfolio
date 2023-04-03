@@ -9,6 +9,7 @@ import '../../mobileStyles/home.scss';
 import About from '../about/About';
 import Connect from '../connect/Connect';
 import pacificCity from './magicImage';
+import useScreenQuery from '../../utils/use-screen-query';
 
 export default function Home(): JSX.Element {
   const [source, setSource] = useState(
@@ -18,6 +19,8 @@ export default function Home(): JSX.Element {
   const projectsRef = useRef<HTMLDivElement>(null);
   const techRef = useRef<HTMLDivElement>(null);
   const connect = useRef<HTMLDivElement>(null);
+
+  const { isDesktop } = useScreenQuery();
 
   useEffect(() => {
     const img = new Image();
@@ -39,7 +42,10 @@ export default function Home(): JSX.Element {
       <div id="top">
         <header
           className={source.includes('giphy') ? 'loading' : ''}
-          style={{ backgroundImage: `url(${source})` }}
+          style={{
+            backgroundImage: isDesktop ? `url(${source})` : '',
+            backgroundColor: !isDesktop ? 'tan' : '',
+          }}
           id="header"
         >
           <div id="text">

@@ -43,7 +43,7 @@ function useScreenQuery(): IUseScreenQueryReturn {
 
     window.addEventListener('resize', timeoutFunction);
 
-    // need to check on mount as well;
+    // need to check on mount as well
     checkWindowSize(window);
 
     return () => timeout.current && clearTimeout(timeout.current);
