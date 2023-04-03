@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable no-alert */
 import React, { useEffect, useState, useRef } from 'react';
-// import { isMobile } from 'react-device-detect';
+
 import Tech from '../tech/Tech';
 import Projects from '../projects/Projects';
 import './Home.scss';
