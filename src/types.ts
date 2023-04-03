@@ -20,3 +20,12 @@ export type OtherProjectType = {
   githubLink: string;
   deployedLink: string;
 };
+
+export type Dictionary = { [key: string]: any };
+
+export enum HomepageSections {
+  Projects = 'projects',
+  Tech = 'tech',
+  About = 'about',
+  Connect = 'connect',
+}

@@ -1,6 +1,6 @@
 /* eslint-disable react/jsx-props-no-spreading */
 /* eslint-disable no-alert */
-import React, { useEffect, useState, useRef } from 'react';
+import React, { createRef, useEffect, useRef, useState } from 'react';
 
 import Tech from '../tech/Tech';
 import Projects from '../projects/Projects';
@@ -10,15 +10,15 @@ import About from '../about/About';
 import Connect from '../connect/Connect';
 import pacificCity from './magicImage';
 import useScreenQuery from '../../utils/use-screen-query';
+import Nav from '../nav/nav';
+import { Dictionary, HomepageSections } from '../../types';
 
 export default function Home(): JSX.Element {
   const [source, setSource] = useState(
     'https://media.giphy.com/media/LLd6Ma5vQtXyw/giphy.gif'
   );
-  const aboutRef = useRef<HTMLDivElement>(null);
-  const projectsRef = useRef<HTMLDivElement>(null);
-  const techRef = useRef<HTMLDivElement>(null);
-  const connect = useRef<HTMLDivElement>(null);
+
+  const refMap: Dictionary = useRef({});
 
   const { isDesktop } = useScreenQuery();
 
@@ -28,12 +28,26 @@ export default function Home(): JSX.Element {
     img.onload = () => setSource(pacificCity);
   }, []);
 
-  const handleNav = (reference: React.RefObject<HTMLDivElement>) => {
-    if (reference.current) {
-      reference.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
+  useEffect(() => {
+    const sections = [
+      HomepageSections.Projects,
+      HomepageSections.Tech,
+      HomepageSections.About,
+      HomepageSections.Connect,
+    ];
+
+    sections.forEach((section) => {
+      refMap.current[section] = createRef();
+    });
+  }, []);
+
+  const handleNav = (refName: string) => {
+    const ref = refMap.current[refName];
+    if (ref.current) {
+      const yOffset = -60;
+      const y =
+        ref.current.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      window.scrollTo({ top: y, behavior: 'smooth' });
     }
   };
 
@@ -52,7 +66,7 @@ export default function Home(): JSX.Element {
             <h1>Ben Waples</h1>
             <p>Full-Stack Developer</p>
           </div>
-          <button onClick={() => handleNav(projectsRef)} type="button">
+          <button onClick={() => handleNav('projects')} type="button">
             <img
               src="./assets/scroll-down.png"
               className="fadeIn bounce-2"
@@ -61,37 +75,24 @@ export default function Home(): JSX.Element {
           </button>
         </header>
       </div>
-      <nav>
-        <button onClick={() => handleNav(projectsRef)} type="button">
-          <p>Recent Projects</p>
-        </button>
-        <button onClick={() => handleNav(techRef)} type="button">
-          <p>Tech Stack</p>
-        </button>
-        <button onClick={() => handleNav(aboutRef)} type="button">
-          <p>About Me</p>
-        </button>
-        <button onClick={() => handleNav(connect)} type="button">
-          <p>Connect</p>
-        </button>
-      </nav>
+      <Nav handleNav={handleNav} />
       <div id="body">
-        <div className="content" ref={projectsRef} id="projects">
+        <div className="content" ref={refMap.current.projects} id="projects">
           <h1>Projects</h1>
           <div id="projects-component">
             <Projects />
           </div>
         </div>
-        <div className="content" ref={techRef} id="tech">
+        <div className="content" ref={refMap.current.tech} id="tech">
           <h1>Tech Stack</h1>
           <Tech />
         </div>
-        <div className="content" ref={aboutRef} id="aboutMe">
+        <div className="content" ref={refMap.current.about} id="aboutMe">
           <h1>A little about me</h1>
           <About />
           <div className="horizontalLine" />
         </div>
-        <div className="content" ref={connect} id="connect">
+        <div className="content" ref={refMap.current.connect} id="connect">
           <h1>Lets Connect!</h1>
           <Connect />
           <a id="source-code" href="https://github.com/benwaples/portfolio">
