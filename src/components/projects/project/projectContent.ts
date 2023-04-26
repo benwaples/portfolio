@@ -66,4 +66,4 @@ export const twelveDays = {
   deployedLink: 'https://12-days-of-christmas.netlify.app/',
 };
 
-export const otherProjects = [nasaTracker, plantr, twelveDays];
+export const otherProjects = [plantr, twelveDays, nasaTracker];

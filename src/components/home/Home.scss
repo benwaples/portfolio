@@ -209,3 +209,9 @@ nav {
   }
 
 }
+
+@include tablet {
+  .content {
+    padding: 0 50px 40px;
+  }
+}
