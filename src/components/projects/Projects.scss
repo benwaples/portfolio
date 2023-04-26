@@ -1,3 +1,5 @@
+@import '/src/mobileStyles/home.scss';
+
 .project-gif-landscape {
   display: flex;
   flex-direction: column;
@@ -5,7 +7,7 @@
   align-items: center;
   height: auto;
   margin-bottom: 30px;
-  max-width: 50%;
+  max-width: calc(50% - 15px);
 
   h3 {
     align-self: flex-start;
@@ -47,7 +49,7 @@
     width: 100%;
     justify-content: space-between;
     gap: 30px;
-  
+    flex-wrap: wrap;
     .thumbnail {
       display: flex;
       flex-direction: column;
@@ -71,4 +73,70 @@
   height: 1px;
   border-color: black;
   width: 70%;
+}
+
+@mixin imageLeft {
+  video, img {
+    margin-right: auto;
+  }
+  p {
+    margin-left: auto;
+  }
+}
+@mixin imageRight {
+  flex-direction: row-reverse;
+
+  h3 {
+    text-align: right;
+  }
+  video, img {
+    margin-left: auto;
+  }
+  p {
+    margin-right: auto;
+  }
+}
+@include tablet {
+  .project-gif-landscape {
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: unset;
+    position: relative;
+    
+    h3 {
+      width: 100%;
+    }
+    
+    video, img, p {
+      width: 48%;
+    }
+    
+    p {
+      max-height: 190px;
+      overflow-y: scroll;
+    }
+    
+    div, a {
+      position: absolute;
+      white-space: nowrap;
+    }
+    // caption
+    div {
+      bottom: -5px;
+      left: 0;
+    }
+    
+    // a outside of caption
+    & > a {
+      bottom: -5px;
+      right: 0;
+    }
+
+    &:nth-child(odd) {
+      @include imageLeft
+    } 
+    &:nth-child(even) {
+      @include imageRight
+    } 
+  }
 }

@@ -6,7 +6,7 @@ interface IUseScreenQueryReturn {
   isDesktop: boolean;
 }
 
-function useScreenQuery(): IUseScreenQueryReturn {
+function useScreenQuery(timeoutMs = 500): IUseScreenQueryReturn {
   const [isMobile, setIsMobile] = useState(false);
   const [isTablet, setIsTablet] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
@@ -17,15 +17,15 @@ function useScreenQuery(): IUseScreenQueryReturn {
     const checkWindowSize = (eventWindow: Window) => {
       const width = eventWindow.innerWidth;
 
-      if (width > 1440) {
+      if (width >= 1280) {
         setIsDesktop(true);
         setIsTablet(false);
         setIsMobile(false);
-      } else if (width < 1440 && width > 500) {
+      } else if (width < 1280 && width > 600) {
         setIsDesktop(false);
         setIsTablet(true);
         setIsMobile(false);
-      } else if (width <= 500) {
+      } else if (width <= 599) {
         setIsDesktop(false);
         setIsTablet(false);
         setIsMobile(true);
@@ -37,7 +37,7 @@ function useScreenQuery(): IUseScreenQueryReturn {
 
       timeout.current = setTimeout(
         () => checkWindowSize(e.target as Window),
-        500
+        timeoutMs
       );
     };
 
@@ -47,7 +47,7 @@ function useScreenQuery(): IUseScreenQueryReturn {
     checkWindowSize(window);
 
     return () => timeout.current && clearTimeout(timeout.current);
-  }, []);
+  }, [timeoutMs]);
 
   return {
     isMobile,
