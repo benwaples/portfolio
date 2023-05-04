@@ -30,7 +30,9 @@ export default function Project({
         <div dangerouslySetInnerHTML={{ __html: mediaCaption }} />
       ) : null}
       <p>{description}</p>
-      <a href={githubLink}>See the code</a>
+      <a href={githubLink} target="_blank" rel="noreferrer">
+        See the code
+      </a>
     </div>
   );
 }

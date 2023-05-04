@@ -17,9 +17,18 @@ export const brandlive = {
   videoSrc: 'https://www.brandlive.com/wp-content/uploads/Events-iPad-v2.mp4',
   description:
     'Built, released, and maintained the 3.0 version of the Events product (also known as Streams and The Platform) starting with a team of 6 devs that grew to 18. The application is focused on virtual events, meetings, and webinars for enterprise clients.',
-  githubLink: 'NOPE',
+  githubLink: '#',
   mediaCaption:
     'Product demo curtesy of <a href="https://www.brandlive.com/events" target="_blank">Brandlive website</a>',
+};
+
+export const estateSaleTracker = {
+  title: 'Estate Sale Tracker',
+  imgSrc: 'https://im5.ezgif.com/tmp/ezgif-5-fdea8eed37.gif',
+  description: `This app is a solo project designed to help mobile users find and track estate sales in the Portland (PDX) area. It leverages the Next.JS framework (written in TypeScript) to provide an API and a React-based front end. The data is collected from various sources and reorganized via a web-scraper that uses JSDom. Users can sign in using Google SSO, which is handled by the NextAuth library, and track estate sales they are interested in by saving them to a Postgres database. The app also uses a cron job to periodically send email notifications to users about upcoming sales, which is facilitated through the MailJet API.
+
+  One of the key features of this app is its use of the Google Maps API, which is integrated with custom markers and clusters to display the locations of estate sales. The app also includes a virtual list that enhances performance by rendering only the items that are currently visible on the screen, rather than loading all items at once. This makes the app more responsive and improves the user experience.`,
+  githubLink: 'https://github.com/benwaples/estate-sale-trackr-nextjs',
 };
 
 export const canary = {
@@ -44,7 +53,13 @@ export const nsnb = {
   githubLink: 'https://github.com/benwaples/coffee-findr-fe',
 };
 
-const projects: ProjectType[] = [brandlive, canary, alchemyNetworkr, nsnb];
+const projects: ProjectType[] = [
+  brandlive,
+  estateSaleTracker,
+  canary,
+  alchemyNetworkr,
+  nsnb,
+];
 
 export default projects;
 
