@@ -24,7 +24,8 @@ export const brandlive = {
 
 export const estateSaleTracker = {
   title: 'Estate Sale Tracker',
-  imgSrc: 'https://im5.ezgif.com/tmp/ezgif-5-fdea8eed37.gif',
+  imgSrc:
+    'https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNzIzMzE1Nzk1MmM5OTJkNDVmMDM1ZjAzMWFmY2Q5MWE2MDQwMzQ2NCZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PWc/PsTXiqttbb8MGMJ8fO/giphy.gif',
   description: `This app is a solo project designed to help mobile users find and track estate sales in the Portland (PDX) area. It leverages the Next.JS framework (written in TypeScript) to provide an API and a React-based front end. The data is collected from various sources and reorganized via a web-scraper that uses JSDom. Users can sign in using Google SSO, which is handled by the NextAuth library, and track estate sales they are interested in by saving them to a Postgres database. The app also uses a cron job to periodically send email notifications to users about upcoming sales, which is facilitated through the MailJet API.
   <br />
   One of the key features of this app is its use of the Google Maps API, which is integrated with custom markers and clusters to display the locations of estate sales. The app also includes a virtual list that enhances performance by rendering only the items that are currently visible on the screen, rather than loading all items at once. This makes the app more responsive and improves the user experience.`,
